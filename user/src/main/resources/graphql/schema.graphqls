@@ -1,0 +1,37 @@
+type UserQuery {
+  placeHolder: String!
+}
+
+type User {
+  id: ID!
+  username: String!
+}
+
+type RegisterResp {
+  success: Boolean!
+  message: String
+}
+
+type LoginResp {
+  success: Boolean!
+  message: String
+  accessToken: String
+  refreshToken: String
+}
+
+type UserMutation {
+
+  # 用户注册
+  registerUser(username: String!, password: String!): RegisterResp!
+
+  # 用户登录
+  login(username: String!, password: String!): LoginResp!
+
+  # 刷新token
+  refreshToken(refreshToken: String!): LoginResp!
+}
+
+schema {
+  mutation: UserMutation
+  query: UserQuery
+}
