@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.service.user.mapper.UserMapper">
+<mapper namespace="com.service.team.mapper.TeamMapper">
 
-    <resultMap id="BaseResultMap" type="com.service.team.entity.Team">
-        <id column="id" jdbcType="INTEGER" property="id" />
-        <result column="teamname" jdbcType="VARCHAR" property="teamname" />
-        <result column="captainID" jdbcType="INTEGER" property="captainID" />
-    </resultMap>
-    <select id="selectByTeamname" parameterType="String" resultType="com.service.team.entity.Team">
+    <!-- 根据ID查询Team -->
+    <select id="getTeamById" parameterType="int" resultType="com.service.team.entity.Team">
+        SELECT * FROM teams WHERE id = #{id}
+    </select>
+
+    <!-- 根据名称查询Team -->
+    <select id="getTeamByName" parameterType="string" resultType="com.service.team.entity.Team">
         SELECT * FROM teams WHERE teamname = #{teamname}
     </select>
 
+    <!-- 添加Team -->
     <insert id="insertTeam" parameterType="com.service.team.entity.Team">
-        INSERT INTO teams (teamname, captainID) VALUES (#{teamname}, #{captainID})
+        INSERT INTO teams (teamname, captainID) VALUES(#{teamname}, #{captainID})
     </insert>
 
 </mapper>

@@ -1,5 +1,6 @@
 package com.service.team.controller;
 
+import com.service.team.entity.Team;
 import com.service.team.service.MessageReceiver;
 import com.service.team.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,8 @@ public class TeamController {
     @RequestMapping("/register")
     public String register(String teamname, Integer captainID){
         try{
-            return teamService.register(teamname, captainID).toString();
+            Team team = new Team(teamname, captainID);
+            return teamService.register(team).toString();
         } catch (Exception e){
             return e.getMessage();
         }

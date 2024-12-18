@@ -8,26 +8,26 @@
             <Config>
               <option name="comment" value="true" />
               <option name="daoMvnPath" value="src/main/java" />
-              <option name="daoName" value="TeamsMapper" />
-              <option name="daoPackage" value="com.service.user.mapper" />
+              <option name="daoName" value="TeamMapper" />
+              <option name="daoPackage" value="com.service.team.mapper" />
               <option name="daoPostfix" value="Mapper" />
-              <option name="daoTargetFolder" value="$PROJECT_DIR$/user" />
+              <option name="daoTargetFolder" value="$PROJECT_DIR$/team" />
               <option name="modelMvnPath" value="src/main/java" />
-              <option name="modelName" value="Teams" />
-              <option name="modelPackage" value="com.service.user.entity" />
-              <option name="modelTargetFolder" value="$PROJECT_DIR$/user" />
+              <option name="modelName" value="Team" />
+              <option name="modelPackage" value="com.service.team.entity" />
+              <option name="modelTargetFolder" value="$PROJECT_DIR$/team" />
               <option name="mysql_8" value="true" />
               <option name="name" value="teams" />
               <option name="needToStringHashcodeEquals" value="true" />
               <option name="offsetLimit" value="true" />
               <option name="overrideXML" value="true" />
               <option name="primaryKey" value="id" />
-              <option name="projectFolder" value="$PROJECT_DIR$/user" />
+              <option name="projectFolder" value="$PROJECT_DIR$/team" />
               <option name="tableName" value="teams" />
               <option name="useSchemaPrefix" value="true" />
               <option name="xmlMvnPath" value="src/main/resources" />
               <option name="xmlPackage" value="mapper" />
-              <option name="xmlTargetFolder" value="$PROJECT_DIR$/user" />
+              <option name="xmlTargetFolder" value="$PROJECT_DIR$/team" />
             </Config>
           </value>
         </entry>
