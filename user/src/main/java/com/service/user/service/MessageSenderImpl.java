@@ -18,11 +18,8 @@ public class MessageSenderImpl implements MessageSender {
     }
 
     public void sendTeamRegistration(String teamname, String captainId){
-//        Map<String, Object> message = new HashMap<>();
-//        message.put("teamname", teamname);
-//        message.put("captainId", captainId);
+        TeamRegisterReq teamRegisterReq = new TeamRegisterReq(teamname, captainId);
         // 问题在这里，我没办法发送dto对象过去
-        rabbitTemplate.convertAndSend("com.team.register", teamname);
-        System.out.printf("sent message: " + teamname);
+        rabbitTemplate.convertAndSend("com.team.register", teamRegisterReq);
     }
 }

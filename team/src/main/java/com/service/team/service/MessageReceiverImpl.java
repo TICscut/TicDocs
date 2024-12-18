@@ -20,10 +20,10 @@ public class MessageReceiverImpl implements MessageReceiver{
 
     @Override
     @RabbitListener(queues = "com.team.register")
-    public void receiveTeamRegistration(String message) {
+    public void receiveTeamRegistration(TeamRegisterReq teamRegisterReq) {
         // 问题在这里，我如果把参数写成dto对象，就会出错
-        lastReceivedMessage = new TeamRegisterReq(message, "1");
-        System.out.println("received: " + lastReceivedMessage);
+        lastReceivedMessage = teamRegisterReq;
+        System.out.println("received: " + lastReceivedMessage.toString());
     }
 
     public TeamRegisterReq getLastReceivedMessage() {

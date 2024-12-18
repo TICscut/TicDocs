@@ -34,4 +34,12 @@ public class TeamRegisterReq implements Serializable {
     public void setCaptainId(String captainId) {
         this.captainId = captainId;
     }
+
+    @Override
+    public String toString() {
+        return "TeamRegisterReq{" +
+                "teamName='" + teamName + '\'' +
+                ", captainId='" + captainId + '\'' +
+                '}';
+    }
 }

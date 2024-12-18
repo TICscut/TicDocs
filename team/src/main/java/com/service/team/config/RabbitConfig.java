@@ -1,4 +1,4 @@
-package com.service.user.config;
+package com.service.team.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
